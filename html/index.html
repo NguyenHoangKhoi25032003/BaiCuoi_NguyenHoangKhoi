@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styte.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+
+  
+</head>
+<body>
+    <div class="Wapper">
+        <div class="row">
+            <div class="col-sm-3">
+                <img style="width: 80%;" src="../img/logo.PNG" alt="">
+            </div>
+            <div style="margin-top: 200px;" class="col-sm-9 text-center">
+                <h1 style="font-size: 60px; color: cornflowerblue;">TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP TP. HỒ CHÍ MINH</h1>
+                <h1 id="khoa" style="font-size: 70px; color: red;">KHOA CÔNG NGHỆ THÔNG TIN</h1>
+          
+            </div>
+
+           
+
+        </div>
+
+        <div style="margin-top: 200px;" class="row">
+            <div class="col-sm-1 text-center">
+                <button id="btn_DangNhap" style="font-size: 50px; color: rgb(171, 168, 168);" class="btn btn-light">Đăng nhập</button>
+            </div>
+            <div class="col-sm-2 text-center">
+                <button id="btn_DangKi" style="font-size: 50px; color: rgb(171, 168, 168);" class="btn btn-light">Đăng kí</button>
+            </div>
+        </div>
+
+
+        <div class="row mt-5">
+            <div class="col-sm-12 text-center">
+                <p style="font-size: 100px;">DANH SÁCH THAM GIA ĐỘI ROBOCON KHOA CNTT</p>
+            </div>
+        </div>
+
+        <div>
+            <table id="table1" class="table">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Mã thành viên</th>
+                        <th>Họ tên</th>
+                        <th>Lớp</th>
+                        <th>Ngày tham gia</th>
+                        <th>Điện thoại</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                </tbody>
+            </table>
+        </div>
+
+
+        <div style="margin-top: 300px;" class="row">
+            <div class="col-sm-4 text-right">
+                <p style="font-size: 50px;">SVTH: Nguyễn Hoàng Khôi</p>
+            </div>
+            <div class="col-sm-4 text-center">
+                <p style="font-size: 50px;">Mã số sinh viên: 21020131</p>
+            </div>
+            <div class="col-sm-4">
+                <p style="font-size: 50px;">Lớp: DHKTPM17A</p>
+            </div>
+        </div>
+
+
+        <div  id="from">
+            <div style="width: 40%;" id="from_con">
+                <form action="">
+                    <div class="form-group mt-5">
+                        <label for="">THÔNG TIN CÁ NHÂN</label>
+                    </div>
+               
+                <div class="form-group mt-5">
+                    <div class="row mt-5">
+                        <label class="col-sm-3" for="">Mã thành viên:</label>
+                        <input id="inMa" class="col-sm-9" type="text" placeholder="Mã K16-123456789">
+                        <label id="lblMa" style="color: red;" for=""></label>
+                    </div>
+                </div> 
+                <div class="form-group">
+                    <div class="row mt-5">
+                        <label class="col-sm-3" for="">Họ tên:</label>
+                        <input id="inTen" class="col-sm-9" type="text" placeholder="Họ tên: Tran Anh Dung">
+                        <label id="lblTen" style="color: red;" for=""></label>
+                    </div>
+                </div> 
+                <div class="form-group">
+                    <div class="row mt-5">
+                        <label class="col-sm-3" for="">Lớp:</label>
+                        <input id="inLop" class="col-sm-9" type="text" placeholder="Lớp: DHKTPM16ATT">
+                        <label id="lblLop" style="color: red;" for=""></label>
+                    </div>
+                </div> 
+                <div class="form-group">
+                    <div class="row mt-5">
+                        <label class="col-sm-3" for="">Ngày tham gia:</label>
+                        <input id="inNgay" class="col-sm-9" type="text" placeholder="mm/dd/yyyy">
+                        <label id="lblNgay" style="color: red;" for=""></label>
+                    </div>
+                </div> 
+                <div class="form-group">
+                    <div class="row mt-5">
+                        <label class="col-sm-3" for="">Số điện thoại</label>
+                        <input id="inSo" class="col-sm-9" type="text" placeholder="SDT: 0xxx-xxx-xxx">
+                        <label id="lblSo" style="color: red;" for=""></label>
+                    </div>
+                </div> 
+                <div class="form-group">
+                    <div class="row mt-5">
+                        <label class="col-sm-3" for="">Email:</label>
+                        <input id="inEmail" class="col-sm-9" type="text" placeholder="Email: xxxxxx@iuh.edu.vn">
+                        <label id="lblEmail" style="color: red;" for=""></label>
+                    </div>
+                </div>
+               
+                </form>
+                <button id="btnLuu" class="btn btn-success col-sm-12 mt-5">Lưu</button>
+            </div>
+        </div>
+
+      
+    </div>
+
+    <script src="../js/java.js"></script>
+
+    <script>
+        $(document).ready(function(){
+           
+            $("#btnLuu").click(function(){
+           
+               
+                let ma = $("#inMa").val();
+                let ten = $("#inTen").val();
+                let lop = $("#inLop").val();
+                let ngay = $("#inNgay").val();
+                let so = $("#inSo").val();
+                let email = $("#inEmail").val();
+                var i=0;
+                let form =document.getElementById("from");
+                form.classList.remove('show');
+                $("#table1 tbody").last().after(
+                    '<tr>'+
+                        '<td>'+i+'</td>'+
+                        '<td>'+ma+'</td>'+
+                        '<td>'+ten+'</td>'+
+                        '<td>'+lop+'</td>'+
+                        '<td>'+ngay+'</td>'+
+                        '<td>'+so+'</td>'+
+                        '<td>'+email+'</td>'+
+                    '</tr>'
+                );
+               
+            })
+        })
+       
+
+    </script>
+</body>
+</html>

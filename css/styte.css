@@ -1,0 +1,49 @@
+td
+{
+    font-size: 50px;
+}
+label
+{
+    font-size: 50px;
+}
+#from
+{
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    width: 100%;
+}
+
+#from_con
+{
+    width: 60%;
+    position: relative;
+    display: flex;
+    background-color: white;
+    padding: 50px;
+    flex-direction: column;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 1s ease-in-out;
+   
+}
+#from.show #from_con{
+    top: 500px;
+}
+#from.show
+{
+    opacity: 1;
+    pointer-events: all;
+}
+#table1 thead tr{
+    background-color: darkviolet;
+    box-shadow: 0px 0px 5px darkviolet;
+    outline: darkviolet;
+    border: 1px solid white;
+    color: white;
+}
